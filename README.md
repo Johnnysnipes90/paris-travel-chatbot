@@ -5,21 +5,21 @@
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Project Type](https://img.shields.io/badge/Type-Portfolio%20Project-orange.svg)](https://github.com/Johnnysnipes90)
 
-
-An **AI-powered virtual tour guide** built with the **OpenAI API**, providing smart, engaging, and informative responses to common Paris travel questions.  
+An **AI-powered virtual tour guide** built with the **OpenAI API**, designed to deliver smart, engaging, and informative responses to common Paris travel questions.  
 Developed as part of **Peterman Reality Tours’ AI Innovation Series**.
 
 ---
 
 ## 🚀 Features
 
-- ✅ Uses **GPT-4o-mini** (configurable) for efficient answers  
-- ✅ Preloaded with sample questions about Paris landmarks  
-- ✅ Fully **interactive CLI chat**  
-- ✅ Saves conversations to JSON for analysis  
-- ✅ Uses **Rich** for a clean terminal UI  
-- ✅ Graceful error handling and logging  
-- ✅ Standard, GitHub-ready structure  
+- ✅ Built with **GPT-4o-mini** (efficient & accurate)
+- ✅ Preloaded with sample tourist questions
+- ✅ Fully **interactive CLI chat**
+- ✅ Logs conversation data for analysis
+- ✅ Styled output using **Rich**
+- ✅ Secure `.env` API key management
+- ✅ Robust error handling
+- ✅ GitHub-ready, industry-standard structure
 
 ---
 
