@@ -29,7 +29,17 @@ Paris-Travel-Chatbot/
 
 ## 🧑‍💻 Setup
 
-1) **Create and activate a virtual environment**
+---
+
+## 🧑‍💻 Setup & Run
+
+1) **Clone the Repository**
+   ```bash
+   git clone https://github.com/Johnnysnipes90/Paris-Travel-Chatbot.git
+   cd Paris-Travel-Chatbot/src
+
+
+2) **Create and activate a virtual environment**
 
 ```bash
 # macOS/Linux
@@ -40,12 +50,12 @@ python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
 
-2) **Install dependencies**
+3) **Install dependencies**
 ```bash
 pip install -r requirements.txt
 ```
 
-3) **Set your OpenAI API key**
+4) **Set your OpenAI API key**
 ```bash
 # macOS/Linux
 export OPENAI_API_KEY="your_api_key_here"
@@ -57,7 +67,7 @@ $env:OPENAI_API_KEY="your_api_key_here"
 
 (Optional) Create a `.env` file with `OPENAI_API_KEY=...`.
 
-4) **Run**
+5) **Run**
 ```bash
 python src/paris_chatbot.py
 ```
