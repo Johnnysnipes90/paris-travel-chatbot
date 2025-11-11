@@ -1,3 +1,5 @@
+![Paris Travel Chatbot Banner](assets/paris_banner.png)
+
 # 🗼 AI Paris Travel Chatbot
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
@@ -133,7 +135,7 @@ docker compose build
 docker compose up paris-chatbot
 ```
 
-3) **3. Run Streamlit Web App**
+3) **Run Streamlit Web App**
 ```bash
 docker compose up paris-chatbot-web
 ```
