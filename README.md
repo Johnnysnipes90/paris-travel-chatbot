@@ -12,40 +12,48 @@ Developed as part of **Peterman Reality Tours’ AI Innovation Series**.
 
 ## 🚀 Features
 
-- ✅ Built with **GPT-4o-mini** (efficient & accurate)
-- ✅ Preloaded with sample tourist questions
-- ✅ Fully **interactive CLI chat**
-- ✅ Logs conversation data for analysis
-- ✅ Styled output using **Rich**
-- ✅ Secure `.env` API key management
-- ✅ Robust error handling
-- ✅ GitHub-ready, industry-standard structure
+- ✅ Built with **GPT-4o-mini** (efficient & accurate)  
+- ✅ Preloaded with sample tourist questions  
+- ✅ Fully **interactive CLI chat**  
+- ✅ JSON-based conversation logging  
+- ✅ Styled terminal UI using **Rich**  
+- ✅ Secure `.env` API key handling  
+- ✅ Strong error handling & clean modular code  
+- ✅ **Docker + Docker Compose support**  
+- ✅ Industry-standard project structure  
 
 ---
 
 ## 🧰 Project Structure
 
 
+
 ```
 Paris-Travel-Chatbot/
 ├── src/
-│   └── paris_chatbot.py
+│ └── paris_chatbot.py
 ├── data/
-│   └── conversation_log.json  # created at runtime
+│ └── conversation_log.json # created at runtime
+├── .env.example
 ├── requirements.txt
+├── docker-compose.yml
+├── Dockerfile
 ├── README.md
 ├── .gitignore
 └── LICENSE
 ```
 
+---
 
-## 🧑‍💻 Setup & Run
+# ⚙️ **Local Setup (Without Docker)**
 
-1) **Clone the Repository**
-   ```bash
-   git clone https://github.com/Johnnysnipes90/Paris-Travel-Chatbot.git
-   cd Paris-Travel-Chatbot
+## 🧑‍💻 Setup & Run Locally
 
+### 1) Clone the Repository
+```bash
+git clone https://github.com/Johnnysnipes90/Paris-Travel-Chatbot.git
+cd Paris-Travel-Chatbot
+```
 
 2) **Create and activate a virtual environment**
 
@@ -82,11 +90,36 @@ $env:OPENAI_API_KEY="your_api_key_here"
 (Optional) Create a .env file with:
 ```bash
 OPENAI_API_KEY=your_api_key_here
+MODEL_NAME=gpt-4o-mini
+LOG_FILE_PATH=./data/conversation_log.json
 ```
 
 5) **Run the Chatbot**
 ```bash
 python src/paris_chatbot.py
+```
+
+
+# **🐳 Docker Setup (Production Ready)**
+
+This project includes full Docker and Docker Compose support.
+
+1) **Build the Docker image**
+```bash
+docker compose build
+```
+
+2) **Run the chatbot inside Docker**
+```bash
+docker compose up
+```
+- ✅ The data/ folder is persisted
+- ✅ The .env file injects your OpenAI key
+- ✅ Terminal stays interactive
+
+3) **Stop the chatbot container**
+```bash
+docker compose down
 ```
 
 ## 🧾 Example
