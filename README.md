@@ -2,42 +2,49 @@
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
 [![OpenAI](https://img.shields.io/badge/OpenAI-API-green.svg)](https://platform.openai.com/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Web%20App-FF4B4B.svg)](https://streamlit.io/)
+[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED.svg)](https://www.docker.com/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Project Type](https://img.shields.io/badge/Type-Portfolio%20Project-orange.svg)](https://github.com/Johnnysnipes90)
 
-An **AI-powered virtual tour guide** built with the **OpenAI API**, designed to deliver smart, engaging, and informative responses to common Paris travel questions.  
-Developed as part of **Peterman Reality Tours’ AI Innovation Series**.
+An **AI-powered virtual tour guide** built with the **OpenAI API**, designed to deliver smart, engaging, and informative responses about the beautiful city of Paris.  
+This project is developed as part of **Peterman Reality Tours’ AI Innovation Series**.
 
 ---
 
-## 🚀 Features
+# ✨ Key Features
 
-- ✅ Built with **GPT-4o-mini** (efficient & accurate)  
-- ✅ Preloaded with sample tourist questions  
-- ✅ Fully **interactive CLI chat**  
-- ✅ JSON-based conversation logging  
-- ✅ Styled terminal UI using **Rich**  
-- ✅ Secure `.env` API key handling  
-- ✅ Strong error handling & clean modular code  
-- ✅ **Docker + Docker Compose support**  
-- ✅ Industry-standard project structure  
+### ✅ Intelligent AI Travel Assistant  
+Uses **GPT-4o-mini** to provide accurate answers on Paris landmarks, museums, food, travel routes, and more.
+
+### ✅ Two Interfaces  
+- **CLI Application** (Rich-powered terminal UI)  
+- **Streamlit Web App** (modern, beautiful, responsive)
+
+### ✅ Complete Engineering Practices  
+- Modular codebase  
+- Logging of all conversations  
+- Secure environment variable handling  
+- Docker + Docker Compose support  
+- Clean folder structure suitable for professional teams  
 
 ---
 
-## 🧰 Project Structure
+# 🧰 Project Structure
 
 
 
 ```
 Paris-Travel-Chatbot/
 ├── src/
-│ └── paris_chatbot.py
+│ ├── paris_chatbot.py # CLI chatbot
+│ └── paris_chatbot_app.py # Streamlit web app (GUI)
 ├── data/
-│ └── conversation_log.json # created at runtime
+│ └── conversation_log.json # Auto-generated logs
 ├── .env.example
 ├── requirements.txt
-├── docker-compose.yml
 ├── Dockerfile
+├── docker-compose.yml
 ├── README.md
 ├── .gitignore
 └── LICENSE
@@ -94,13 +101,25 @@ MODEL_NAME=gpt-4o-mini
 LOG_FILE_PATH=./data/conversation_log.json
 ```
 
-5) **Run the Chatbot**
+5) **Run the CLI Chatbot**
 ```bash
 python src/paris_chatbot.py
 ```
 
+6) **🌐 Run the Streamlit Web App (GUI)**
+```bash
+streamlit run src/paris_chatbot_app.py
+```
 
-# **🐳 Docker Setup (Production Ready)**
+You will see a modern Paris-themed chat interface with:
+- ✅ Interactive chat bubbles
+- ✅ Typing animation
+- ✅ Sidebar quick questions
+- ✅ Automatic screen-width responsiveness
+- ✅ A hero header and modern layout
+
+
+# **🐳 Docker Setup**
 
 This project includes full Docker and Docker Compose support.
 
@@ -109,15 +128,17 @@ This project includes full Docker and Docker Compose support.
 docker compose build
 ```
 
-2) **Run the chatbot inside Docker**
+2) **Run the CLI chatbot inside Docker**
 ```bash
-docker compose up
+docker compose up paris-chatbot
 ```
-- ✅ The data/ folder is persisted
-- ✅ The .env file injects your OpenAI key
-- ✅ Terminal stays interactive
 
-3) **Stop the chatbot container**
+3) **3. Run Streamlit Web App**
+```bash
+docker compose up paris-chatbot-web
+```
+
+4) **Stop the chatbot container**
 ```bash
 docker compose down
 ```
