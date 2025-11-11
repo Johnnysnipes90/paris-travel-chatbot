@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  paris-chatbot:
+    build: .
+    container_name: paris_travel_chatbot
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+    stdin_open: true
+    tty: true
