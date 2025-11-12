@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   paris-chatbot:
     build: .
@@ -10,3 +8,13 @@ services:
       - ./data:/app/data
     stdin_open: true
     tty: true
+  paris-chatbot-web:
+    build: .
+    container_name: paris_travel_chatbot_web
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+    ports:
+      - "8501:8501"
+    command: streamlit run src/paris_chatbot_app.py --server.port 8501 --server.address 0.0.0.0
